@@ -22,7 +22,10 @@ const customJestConfig = {
          statements: 0 // 🔥
       }
    },
-   moduleNameMapper: {}
+   moduleNameMapper: {
+      "^\\$msw/server$":
+         "<rootDir>/src/lib/domain/shared/mocks/msw/api/shared-mocks-msw-api-server.ts"
+   }
 };
 
 module.exports = createJestConfig(customJestConfig);

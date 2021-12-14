@@ -3,8 +3,9 @@
  */
 import { render, screen } from "@testing-library/react";
 
-import { Layout, PageWithLayout } from "../../entity/shared-framework-entity";
 import { getLayout } from "./shared-framework-util-get-layout";
+
+import type { Layout, PageWithLayout } from "../../entity/shared-framework-entity";
 
 const PageMock: PageWithLayout = () => {
    return (
