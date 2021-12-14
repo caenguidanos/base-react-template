@@ -1,4 +1,4 @@
-import { AppPropsWithLayout, Layout } from "../../entity/shared-framework-entity";
+import type { AppPropsWithLayout, Layout } from "../../entity/shared-framework-entity";
 
 const noop: Layout = ({ page }) => {
    return <>{page}</>;
