@@ -6,9 +6,9 @@
 
 #### Stack:
 
--  :zap: [nextjs](https://nextjs.com/)
+-  :zap: [next.js](https://nextjs.com/)
 -  :zap: [typescript](https://www.typescriptlang.org/)
--  :zap: [swc](https://swc.rs/)
+-  :zap: [stitches.js](https://stitches.dev/)
 -  :zap: [playwright](https://playwright.dev/)
 -  :zap: [jest](https://jestjs.io/)
 -  :zap: [msw](https://mswjs.io/docs/)

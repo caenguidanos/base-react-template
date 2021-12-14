@@ -17,8 +17,6 @@ module.exports = {
 
       config.experiments.topLevelAwait = true;
 
-      console.log(config.experiments);
-
       return config;
    }
 };
