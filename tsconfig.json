@@ -1,20 +1,45 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+   "compilerOptions": {
+      "target": "es2021",
+      "module": "esnext",
+      "lib": ["es2021", "DOM"],
+      "skipLibCheck": true,
+      "strict": true,
+      "noEmit": true,
+      "importHelpers": true,
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "importsNotUsedAsValues": "error",
+      "forceConsistentCasingInFileNames": true,
+      "noImplicitAny": false,
+      "strictNullChecks": false,
+      "strictFunctionTypes": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": false,
+      "noFallthroughCasesInSwitch": true,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "baseUrl": ".",
+      "allowJs": true,
+      "checkJs": true,
+      "paths": {
+         "$lib": ["src/lib"],
+         "$lib/*": ["src/lib/*"],
+         "$msw": [
+            "src/lib/domain/shared/mocks/msw/api/auto-inject/shared-mocks-msw-api-auto-inject.ts"
+         ],
+         "$msw/browser": ["src/lib/domain/shared/mocks/msw/api/shared-mocks-msw-api-browser.ts"],
+         "$msw/server": ["src/lib/domain/shared/mocks/msw/api/shared-mocks-msw-api-server.ts"],
+         "$styles/globals": ["src/lib/domain/shared/styles/globals.scss"],
+         "$stitches": ["stitches.config.ts"],
+         "$framework": ["src/lib/domain/shared/framework/api/shared-framework-api.ts"]
+      }
+   },
+   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./jest.setup.ts"],
+   "exclude": ["node_modules"]
 }

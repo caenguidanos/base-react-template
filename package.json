@@ -1,22 +1,73 @@
 {
-  "name": "base-react-template",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "12.0.7",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
-  },
-  "devDependencies": {
-    "@types/node": "16.11.13",
-    "@types/react": "17.0.37",
-    "eslint": "8.4.1",
-    "eslint-config-next": "12.0.7",
-    "typescript": "4.5.4"
-  }
+   "name": "base-react-template",
+   "version": "0.0.1",
+   "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint",
+      "test": "NODE_OPTIONS=--experimental-vm-modules jest --no-cache",
+      "test:watch": "pnpm test -- --watch",
+      "e2e": "playwright test",
+      "e2e:report": "playwright show-report coverage/e2e/html",
+      "format": "prettier --write .",
+      "storybook": "start-storybook -p 6006 -s public",
+      "storybook:build": "build-storybook -s public",
+      "prepare": "msw init public && husky install"
+   },
+   "dependencies": {
+      "@stitches/react": "1.2.6",
+      "next": "12.0.7",
+      "preact": "10.6.2",
+      "react-dom": "17.0.2",
+      "react": "17.0.2",
+      "recoil": "0.5.2"
+   },
+   "resolutions": {
+      "preact": "10.6.2"
+   },
+   "devDependencies": {
+      "@commitlint/cli": "15.0.0",
+      "@commitlint/config-conventional": "15.0.0",
+      "@commitlint/format": "15.0.0",
+      "@jest/globals": "27.4.2",
+      "@playwright/test": "1.17.1",
+      "@storybook/addon-actions": "6.4.7",
+      "@storybook/addon-essentials": "6.4.7",
+      "@storybook/addon-links": "6.4.7",
+      "@storybook/addon-postcss": "2.0.0",
+      "@storybook/builder-webpack5": "6.4.7",
+      "@storybook/manager-webpack5": "6.4.7",
+      "@storybook/preset-scss": "1.0.3",
+      "@storybook/react": "6.4.7",
+      "@testing-library/dom": "8.11.1",
+      "@testing-library/jest-dom": "5.16.0",
+      "@testing-library/react-hooks": "7.0.2",
+      "@testing-library/react": "12.1.2",
+      "@testing-library/user-event": "13.5.0",
+      "@types/isomorphic-fetch": "0.0.35",
+      "@types/jest": "27.0.3",
+      "@types/node": "16.11.11",
+      "@types/react": "17.0.37",
+      "eslint-config-next": "12.0.7",
+      "eslint-config-prettier": "8.3.0",
+      "eslint-plugin-jest-dom": "3.9.2",
+      "eslint-plugin-playwright": "0.6.0",
+      "eslint-plugin-storybook": "0.5.3",
+      "eslint-plugin-testing-library": "5.0.1",
+      "eslint": "8.4.1",
+      "husky": "7.0.4",
+      "isomorphic-fetch": "3.0.0",
+      "jest": "27.4.3",
+      "msw": "0.36.0",
+      "prettier": "2.5.1",
+      "react-test-renderer": "17.0.2",
+      "sass": "1.44.0",
+      "tsconfig-paths-webpack-plugin": "3.5.2",
+      "tslib": "2.3.1",
+      "typescript": "4.5.4"
+   },
+   "msw": {
+      "workerDirectory": "public"
+   }
 }
